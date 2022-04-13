@@ -11,7 +11,6 @@ const correctLengthInput = Number(input.dataset.length);
 input.addEventListener('blur', onInputValue);
 
 function onInputValue(event) {
-  console.log(typeof (event.currentTarget.value.length));
   
   if (event.currentTarget.value.length === correctLengthInput) {
     input.classList.add('valid');
