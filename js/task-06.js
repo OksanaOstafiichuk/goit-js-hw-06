@@ -7,15 +7,25 @@
 const input = document.querySelector('input');
 console.log(input);
 
+const correctLengthInput = Number(input.dataset.length);
+console.log(typeof(correctLengthInput));
+
+input.addEventListener('blur', onInputValue);
 
 
 
-input.addEventListener("focus", () => {
-  input.value = "This input has focus";
-});
+function onInputValue(event) {
+  console.log(typeof (event.currentTarget.value.length));
+  
+  if (event.currentTarget.value.length === correctLengthInput) {
+    input.classList.add('valid');
+  } else {
+    input.classList.remove('valid');
+  }
 
-// console.log(input.getAttribute('data-length'));
-input.addEventListener("blur", () => {
-    
-    // console.log(input.value);
-});
+  if (event.currentTarget.value.length !== correctLengthInput) {
+    input.classList.add('invalid');
+  } else {
+    input.classList.remove('invalid');
+  }
+ };
