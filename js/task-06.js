@@ -5,14 +5,10 @@
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
 const input = document.querySelector('input');
-console.log(input);
 
 const correctLengthInput = Number(input.dataset.length);
-console.log(typeof(correctLengthInput));
 
 input.addEventListener('blur', onInputValue);
-
-
 
 function onInputValue(event) {
   console.log(typeof (event.currentTarget.value.length));
