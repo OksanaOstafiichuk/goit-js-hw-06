@@ -44,7 +44,7 @@ function createBoxes(amount) {
 
   for (let i = 0; i < amount; i += 1) {
     let newBox = document.createElement('div')
-    sizeBox = sizeBox + i * 10;
+    sizeBox = sizeBox + 10;
     newBox.style.cssText = `width: ${sizeBox}px; height: ${sizeBox}px; background-color: ${getRandomHexColor()};`
    
     refs.divColection.append(newBox)
